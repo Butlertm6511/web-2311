@@ -1,40 +1,41 @@
+ <!--
+  Title:"Temperature Conversion App" 
+  Author: Professor Krasso
+  Date: 4 November 2022
+  Modified By: TiaNiecia Mosley Butler
+  Description: Demonstration on JavaScript onclick and reading values from input field
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>WEB 231 - Enterprise JavaScript I</title>
 
         <link rel="stylesheet" type="text/css" href="mosleyButler-temp-conversion.css">
-        <link rel="stylesheet" type="text/css" href="global.css">
+        <link rel="stylesheet" type="text/css" href="../global.css" >
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     </head>
-    <bod>
-        <!--
-            Title:Temperature Conversion App 
-            Author: Professor Krasso
-            Date: 4 November 2022
-            Modified By: TiaNiecia Mosley Butler
-            Description: Demonstration on JavaScript onclick and reading values from input field
-        -->
-
+    <body>
+       
         <div id="container">
 
             <h1 class="app-header">Welcome to Temperature Conversion App!</h1>
             
-            <div id="form-Converter">
+            <div id="form-value">
                 
                 <div class="card">
 
                     <div class="card-title">Fahrenheit to Celsius Converter</div>
                     <div class="card-content">
+                        
                         <div class="form">
-
                             <div class="form-field">
                                 <label for="txtMyName">Fahrenheit value</label>
                                 <input type="text" class="input" id="txtFahrenheit" name="myName">
                             </div>
 
                             <div class="form-field">
-                                <button class="btn btn-primary full-width">Convert Temperature</button>
+                                <button type=button class="btn btn-primary full-width" id="Convert-temp">Convert Temperature</button>
                             </div>
                         </div>
 
@@ -48,5 +49,40 @@
         
          </div>
         
-        
+         <div id="form-results">
+
+         </div>
+            <div class="card">
+                <div class="card-title">Conversion Results</div>
+                <div class="contents">
+                    
+                </div>
+           
+            </div>   
+
+        <div class="return-home">
+            <a  href="../index.html">Return</a>
+        </div>
+
+        <div id="container">
+            <div class="app-header"></div>
+            <div id="data-binding-example">
+            
+            <script>
+                
+                document.getElementById("txtFahrenheit").onclick = function(){
+                    let fahrenheit = document.getElementById("txtFahrenheit").value;
+                    fahrenheit = ((parseFloat(fahrenheit)-32)/1.8).tofixed(2);
+                    let fahrenheit = fahrenheit.toFixed(2);
+                }
+                
+
+            </script>
+
+            </div>
+
+        </div>
+
+
+    </body>
 </html>
