@@ -31,11 +31,11 @@
                          <div class="form">
                              <div class="form-field">
                                  <label for="txtMyName">Guess the number:</label>
-                                 <input type="text" class="input" id="txtFahrenheit" name="myName">
+                                 <input type="text" class="input" id="txtMyNumber" name="myName" value="">
                              </div>
  
                              <div class="form-field">
-                                 <button type=button class="btn btn-primary full-width" id="Convert-temp">Results</button>
+                                 <button type= "button" onclick= "myFunction"() class="btn btn-primary full-width" id="btnSubmit">Submit</button>
                              </div>
                          </div>
  
@@ -51,18 +51,47 @@
          
           <div id="form-results">
  
-          </div>
-             <div class="card">
-                 <div class="card-title">Results</div>
-                 <div class="contents">
-                     
-                 </div>
+            </div class="card">
+              <div class="card-title">Results</div>
+                <div class="contents">   
+                </div>
+              </div>   
+            </div>
+
             
-             </div>   
  
          <div class="return-home">
              <a  href="../index.html">Return</a>
          </div>
+       
+        
+           
+           <script>
+
+                document.getElementById("btnSubmit").onclick = function () {
+                    const rnd = Math.floor((Math.random() * 10) + 1 ).value;
+                   
+                    let myNumber = txtMyNumber;
+
+                
+                   if (myNumber === rnd) {
+                    console.log("Congratulations! You picked the correct number!");
+                    } else if (myNumber > rnd) {
+                    console.log("The number is less than myNumber");
+                    } else if (myNumber < rnd) {
+                    console.log("The number is more than myuNumber");
+                    } else {
+                     console.log("Invalid choice");
+                    }
+
+                     document.getElementById("form-field").innerHTML = "txtMyNumber";
+
+                }
+               
+             </script>
+            
+        
+        
        
  
      </body>
